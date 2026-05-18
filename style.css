@@ -37,27 +37,9 @@ body {
 a { text-decoration: none; }
 
 /* ───────────────────────────────────────────────────────── CURSOR */
-#cur {
-  width: 7px; height: 7px;
-  background: var(--matcha);
-  border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9999;
-  transform: translate(-50%,-50%);
-  transition: background .25s, transform .2s;
-}
-#ring {
-  width: 30px; height: 30px;
-  border: 1.5px solid var(--matcha);
-  border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9998;
-  transform: translate(-50%,-50%);
-  transition: width .3s, height .3s, border-color .3s;
-  opacity: .55;
-}
-body.hov #cur { background: var(--warm); transform: translate(-50%,-50%) scale(1.6); }
-body.hov #ring { width: 44px; height: 44px; border-color: var(--warm); opacity: .7; }
+#cur, #ring { display: none; }
+* { cursor: auto; }
+a, button, input[type="submit"], .nav-cta, .btn, .gh-btn, .soc, .sk, .pc, .srv-card { cursor: pointer; }
 
 /* ───────────────────────────────────────────────────────── PARTICLES */
 #particles {
